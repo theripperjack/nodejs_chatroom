@@ -1,0 +1,23 @@
+extends layout
+
+block content
+    script(src="/socket.io/socket.io.js")
+    script(src="/javascripts/main.js")
+
+
+    h1= title
+    p Welcome to #{title}
+
+    form#form_login
+        .input-append
+            input#login.span2.input-medium(type="text", placeholder="enter your name")
+            button#btn_login.btn Login
+
+    form#form_msg.disabled
+        .input-append
+            input#say.span3.input-medium(type="text", placeholder="Say something")
+            button#btn_say.btn Send
+
+
+
+    div#msg.alert.alert-success no message...
